@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{url_for('static', filename='bs/css/bootstrap.min.css')}}">
+  <title>Document</title>
+    <style>
+      body{
+        height: 100%;
+        width: 100%;
+        background-color: beige;
+      }
+      h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      img{
+        margin-left: 20%;
+      }
+      .flexing{
+        display: flex;
+      }
+      ol:first-child{
+        margin-right: 10rem;
+        margin-left: 10rem;
+      }
+      table{
+        width: 50% !important;
+        margin: 0 auto;
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+  <h1 class="h2 text-center my-5">1. Monthly Summary Total</h1>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Year</th>
+          <th scope="col">Month</th>
+          <th scope="col">Totals</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2019</td>
+          <td>Jan</td>
+          <td>{{monthly_totals.first}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Feb</td>
+          <td>{{monthly_totals.second}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Mar</td>
+          <td>{{monthly_totals.third}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Apr</td>
+          <td>{{monthly_totals.forth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>May</td>
+          <td>{{monthly_totals.fifth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Jun</td>
+          <td>{{monthly_totals.sixth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Jul</td>
+          <td>{{monthly_totals.seventh}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Aug</td>
+          <td>{{monthly_totals.eighth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Sep</td>
+          <td>{{monthly_totals.ninth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Oct</td>
+          <td>{{monthly_totals.tenth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Nov</td>
+          <td>{{monthly_totals.eleventh}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Dec</td>
+          <td>{{monthly_totals.twelveth}}</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td>Jan</td>
+          <td>{{monthly_totals.thirteenth}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Feb</td>
+          <td>{{monthly_totals.forteenth}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="h2 text-center my-5">2. Yearly Top 5 on Amount</h1>
+    <div class="flexing container">
+      <ol>
+        <h4 class="h4">2019</h4>
+        <li>{{customers.one}}</li>
+        <li>{{customers.two}}</li>
+        <li>{{customers.three}}</li>
+        <li>{{customers.four}}</li>
+        <li>{{customers.five}}</li>
+      </ol>
+      <ol>
+        <h4 class="h4">2020</h4>
+        <li>{{customers.six}}</li>
+        <li>{{customers.seven}}</li>
+        <li>{{customers.eight}}</li>
+        <li>{{customers.nine}}</li>
+        <li>{{customers.ten}}</li>
+      </ol>
+    </div>
+    <h1 class="h2 text-center my-5">2. Yearly Top 5 on Quantity</h1>
+    <ol>
+      <li class="h4">Qty Bases</li>
+      <li>{{general.one}}</li>
+      <li>{{general.two}}</li>
+      <li>{{general.three}}</li>
+      <li>{{general.four}}</li>
+      <li>{{general.five}}</li>
+    </ol>
+  </div>
+  <img src="{{url_for('static', filename='graph.png')}}" alt="" srcset="">
+</body>
+</html>
